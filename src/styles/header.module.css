@@ -1,0 +1,31 @@
+.rootStyle {
+    background-color: lightblue;
+}
+
+.containerStyle {
+    display: flex;
+    flex-direction: row;
+    margin-left: auto;
+    margin-right: auto;
+    width: fit-content;
+}
+
+.linkStyle {
+    text-decoration: none;
+    font-size: 24px;
+    margin-left: 20px;
+    margin-right: 10px;
+    color: #DA0037;
+    padding: 10px;
+}
+
+.linkActiveStyle {
+    text-decoration: none;
+    font-size: 24px;
+    margin-left: 20px;
+    margin-right: 10px;
+    background-color: #DA0037;
+    padding: 10px;
+}
+
+a { color: inherit; } 
