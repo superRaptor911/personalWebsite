@@ -26,4 +26,9 @@ img {
     background-color: #171717;
     min-height: 400px;
     border-radius: 10px;
+    padding: 20px;
+}
+
+p {
+    font-size: 18px;
 }

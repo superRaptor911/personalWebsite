@@ -14,14 +14,21 @@ const routes = [
     path: '/projects'
   },
   {
-    name: 'Sites',
-    path: '/sites'
+    name: 'Posts',
+    path: '/posts'
+  },
+  {
+    name: 'About',
+    path: '/about'
+  },
+  {
+    name: 'Links',
+    path: '/links'
   }
 ];
 
 const Header = ({ curPage }) => {
   const getLinkStyle = (name) => {
-    console.log(curPage + '|' + name);
     return name === curPage ? linkActiveStyle : linkStyle;
   };
 
