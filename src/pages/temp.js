@@ -22,23 +22,23 @@ export default function Template ({
   );
 }
 
-export const pageQuery = graphql`
-query MyQuery($id: String!) {
-  allFile(
-    filter: {sourceInstanceName: {eq: "posts"}, childrenMarkdownRemark: {elemMatch: {id: {eq: $id}}}}
-  ) {
-    edges {
-      node {
-        id
-        childrenMarkdownRemark {
-          html
-          frontmatter {
-            date
-            title
-          }
-        }
-      }
-    }
-  }
-}
-`;
+// export const pageQuery = graphql`
+// query MyQuery($id: String!) {
+//   allFile(
+//     filter: {sourceInstanceName: {eq: "posts"}, childrenMarkdownRemark: {elemMatch: {id: {eq: $id}}}}
+//   ) {
+//     edges {
+//       node {
+//         id
+//         childrenMarkdownRemark {
+//           html
+//           frontmatter {
+//             date
+//             title
+//           }
+//         }
+//       }
+//     }
+//   }
+// }
+// `;
