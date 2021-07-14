@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import {Link} from 'gatsby';
 import PropTypes from 'prop-types';
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import {
   rootStyle,
   containerStyle,
@@ -52,16 +52,7 @@ const mobileHeader = (isVisible, getLinkStyle) => {
   return null;
 };
 
-const Header = ({curPage}) => {
-  const getLinkStyle = name => {
-    return name === curPage ? linkActiveStyle : linkStyle;
-  };
-
-  const dimention = getDeviceDimention();
-  if (dimention.width < 600) {
-    return mobileHeader(true, getLinkStyle);
-  }
-
+const desktopHeader = getLinkStyle => {
   return (
     <div className={rootStyle}>
       <div className={containerStyle}>
@@ -73,6 +64,23 @@ const Header = ({curPage}) => {
       </div>
     </div>
   );
+};
+
+const Header = ({curPage}) => {
+  const getLinkStyle = name => {
+    return name === curPage ? linkActiveStyle : linkStyle;
+  };
+
+  const [header, setHeader] = useState(desktopHeader(getLinkStyle));
+
+  useEffect(() => {
+    const dimention = getDeviceDimention();
+    if (dimention.width < 600) {
+      setHeader(mobileHeader(true, getLinkStyle));
+    }
+  }, []);
+
+  return header;
 };
 
 Header.prototype = {
