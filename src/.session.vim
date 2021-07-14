@@ -7,18 +7,19 @@ if expand('%') == '' && !&modified && line('$') <= 1 && getline(1) == ''
   let s:wipebuf = bufnr('%')
 endif
 set shortmess=aoO
-badd +5 pages/index.js
-badd +22 components/Header.js
-badd +28 styles/header.module.css
-badd +33 styles/Global.css
-badd +1 pages/projects.js
+badd +14 pages/index.js
+badd +59 components/Header.js
+badd +17 styles/header.module.css
+badd +4 styles/Global.css
+badd +27 pages/projects.js
 badd +24 ~/program/react/personalSite/gatsby-config.js
-badd +9 markdown-pages/pages/index.md
+badd +1 markdown-pages/pages/index.md
 badd +1 markdown-pages/posts/post-1.md
-badd +16 pages/temp.js
+badd +10 markdown-pages/pages/projects.md
+badd +2 components/Utility.js
 argglobal
 %argdel
-edit markdown-pages/pages/index.md
+edit components/Header.js
 set splitbelow splitright
 set nosplitbelow
 set nosplitright
@@ -28,12 +29,12 @@ set winheight=1
 set winminwidth=0
 set winwidth=1
 argglobal
-let s:l = 8 - ((7 * winheight(0) + 22) / 45)
+let s:l = 34 - ((33 * winheight(0) + 22) / 45)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-8
-normal! 06|
+34
+normal! 03|
 tabnext 1
 if exists('s:wipebuf') && getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'
   silent exe 'bwipe ' . s:wipebuf
