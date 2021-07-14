@@ -8,23 +8,24 @@
 module.exports = {
   /* Your site config here */
   siteMetadata: {
-    title: 'Raptor'
+    title: 'Raptor',
   },
   plugins: [
     {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'posts',
-        path: `${__dirname}/src/markdown-pages/posts`
-      }
+        path: `${__dirname}/src/markdown-pages/posts`,
+      },
     },
     {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'pages',
-        path: `${__dirname}/src/markdown-pages/pages`
-      }
+        path: `${__dirname}/src/markdown-pages/pages`,
+      },
     },
-    'gatsby-transformer-remark'
-  ]
+    'gatsby-transformer-remark',
+    'gatsby-plugin-aphrodite',
+  ],
 };

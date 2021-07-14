@@ -16,6 +16,7 @@
   "dependencies": {
     "aphrodite": "^2.4.0",
     "gatsby": "^3.9.0",
+    "gatsby-plugin-aphrodite": "^2.1.1",
     "gatsby-source-filesystem": "^3.9.0",
     "gatsby-transformer-remark": "^4.6.0",
     "react": "^17.0.1",
