@@ -7,16 +7,15 @@ if expand('%') == '' && !&modified && line('$') <= 1 && getline(1) == ''
   let s:wipebuf = bufnr('%')
 endif
 set shortmess=aoO
-badd +14 pages/index.js
-badd +59 components/Header.js
-badd +17 styles/header.module.css
-badd +4 styles/Global.css
+badd +12 pages/index.js
+badd +43 components/Header.js
+badd +15 styles/Global.css
 badd +27 pages/projects.js
 badd +24 ~/program/react/personalSite/gatsby-config.js
 badd +1 markdown-pages/pages/index.md
 badd +1 markdown-pages/posts/post-1.md
 badd +10 markdown-pages/pages/projects.md
-badd +2 components/Utility.js
+badd +4 components/Utility.js
 argglobal
 %argdel
 edit components/Header.js
@@ -29,12 +28,12 @@ set winheight=1
 set winminwidth=0
 set winwidth=1
 argglobal
-let s:l = 34 - ((33 * winheight(0) + 22) / 45)
+let s:l = 43 - ((18 * winheight(0) + 22) / 45)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-34
-normal! 03|
+43
+normal! 07|
 tabnext 1
 if exists('s:wipebuf') && getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'
   silent exe 'bwipe ' . s:wipebuf
